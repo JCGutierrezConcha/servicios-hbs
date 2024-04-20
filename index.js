@@ -65,13 +65,14 @@ app.get('/services', (req, res) => {
 })
 
 app.get('/services/:service', (req, res) => {
-    const serviceSelected = req.params.service
-    console.log(serviceSelected)
-    res.render('service', { serviceSelected })
+    const service = req.params.service
+    const serviceData = services.find((item => item.url === `/services/${service}`))
+
+    if (!serviceData) {
+        return res.status(404).render('404', { title: "No se encuentra el servicio" })
+    }
+    res.render('service', { service: serviceData })
 })
-
-
-
 
 app.get('*', (req, res) => {
     return res.status(404).render('404', { title: "No se encuentra la página" })

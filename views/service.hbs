@@ -1,7 +1,5 @@
 <div>
     {{#if service}}
-    {{> card2 title=this.name description=this.description}}
-    {{ else}}
-    <p>No existe el servicio</p>
+    {{> card2 title=service.name description=service.description}}
     {{/if}}
 </div>

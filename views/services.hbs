@@ -1,13 +1,12 @@
 <h1>Servicios</h1>
 <div>
     {{#if services}}
-    <ul>
-        {{#each services}}
-        <li>
-            {{> card title=this.name url=this.url}}
-        </li>
-        {{/each}}
-    </ul>
+
+    {{#each services}}
+    {{> card title=this.name url=this.url}}
+
+    {{/each}}
+
     {{else}}
     <p>No hay servicios</p>
     {{/if}}
