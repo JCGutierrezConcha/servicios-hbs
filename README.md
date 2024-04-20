@@ -1,2 +1,2 @@
-# servicios-hbs
-Desafio de creacion de un sitio de servicios usando handlebars
+# Servicios con Handlebars
+Desafio de creacion de un sitio de servicios usando handlebars,
